@@ -1,28 +1,71 @@
+/* Define the color palette */
+:root {
+  --background: #EEEBE6;
+  --header: #00000099;
+  --secondary: #CBDF90;
+  --font1: #FFFFFF;
+  --accent: #56A3A6;
+  --accent2: #0D1821;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
 header {
+  z-index: 2;
   max-height: 12rem;
   position: fixed;
   padding-left: 6em;
   padding-right: 6em;
   width: 100%;
   display: flex;
-  background-color: #00000099;
+  background-color: var(--header);
   justify-content: space-between;
 }
 
-body, html {
-  margin: 0;
-  padding: 0;
-  background-image: url('../Assets/Background.jpg');
-}
 
 main {
+  height: 100vh;
   display: block;
-  scroll-snap-type: y mandatory;
-  touch-action: none;
   min-width: 701px;
 }
 
-a {
+section  {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.one {
+  background-image: url('../Assets/Background.jpg');
+}
+
+.two {
+  background-color: var(--background);
+}
+.three {
+  background-color:#EE23EE;
+}
+.four {
+  background-image: url('../Assets/Background.jpg');
+}
+
+.five {
+  background-color:#EE23EE;
+}
+
+.nav-links {
+  list-style-type: none;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.link {
   text-decoration: none;
   color: inherit;
 }
@@ -47,18 +90,27 @@ h2 {
   font-weight: normal;
 }
 
+.navi {
+  position: fixed;
+  max-height: 10rem;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 2em;
+  color: var(--font1);
+  font-size: 4rem;
+}
 .polygon {
       width: 100%;
       height: 100vh;
-      background-color: #EEEBE6;
+      background-color: var(--background);
       clip-path: polygon(0 100%, 0 80%, 60% 80%, 60% 10%, 90% 10%, 90% 80% ,100% 80%, 100% 100%);
       position: relative;
     }
 
 
 .content {
-  
-  position: fixed;
+
+  position: absolute;
   display: flex;
   top: 10%;
   left: 60%;
