@@ -2,7 +2,7 @@
 :root {
   --background: #EEEBE6;
   --header: #00000099;
-  --secondary: #EE23EE;
+  --secondary: #B6C3AF;
   --font1: #FFFFFF;
   --font2: #000000;
   --accent: #FFFFFF;
@@ -102,8 +102,8 @@ p {
   z-index: 2;
   position: fixed;
   width: 30%;
-  height: 50vh;
-  top: 20%;
+  height: 40vh;
+  top: 15%;
   left: 5%;
   display: block;
   font-family: 'Josefin Sans', sans-serif;
