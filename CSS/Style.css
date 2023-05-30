@@ -103,13 +103,13 @@ p {
   position: fixed;
   width: 30%;
   height: 40vh;
-  top: 15%;
+  top: 7rem;
   left: 5%;
   display: block;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 130%;
   min-width: 100px;
-}
+}D
 
 .nav-bar {
   height: inherit;
@@ -183,18 +183,59 @@ p {
 .two {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: flex-start;
+  padding-left: 40rem;
+  padding-right: 7rem;
+  padding-top: 5rem;
 }
 
 .content_two {
   position: relative;
-  top: -10%;
-  left: 50%;
+  left: 2rem;
   height: fit-content;
-  width: 50%;
+  width: 60rem;
   text-align: justify;
   word-wrap: normal;
-  /* background-color: orange; */
+  background-color: orange;
+}
 
+.three {
+  padding-left: 40rem;
+  padding-right: 7rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: flex-end;
+  align-items: flex-end;
+}
+
+.content_three {
+  display: flex;
+  flex-direction: column;
+  height: 50rem;
+  width: 70rem;
+  background-color: green;
+  justify-content: space-between;
+}
+
+.box_1 {
+  padding: 2rem;
+  background-color: orange;
+  width: 70%;
+  height: 40%;
+  align-self: flex-start;
+  border-radius: 15px;
+}
+
+.box_2 {
+  padding: 2rem;
+  background-color: blue;
+  width: 70%;
+  height: 40%;
+  align-self: flex-end;
+  border-radius: 15px;
 }
