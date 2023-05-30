@@ -12,7 +12,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  /* scroll-snap-type: y mandatory; */
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
@@ -180,7 +180,21 @@ p {
   color: var(--font2)
 }
 
+.two {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .content_two {
-  height: 50%;
-  width: 32%;
+  position: relative;
+  top: -10%;
+  left: 50%;
+  height: fit-content;
+  width: 50%;
+  text-align: justify;
+  word-wrap: normal;
+  /* background-color: orange; */
+
 }
