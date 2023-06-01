@@ -59,7 +59,7 @@ section  {
   padding-bottom: 5rem;
   display: grid;
   grid-template-columns: 30rem 1fr 2fr 1fr 5rem;
-  grid-template-rows: repeat(4, 1fr)
+  grid-template-rows: 5rem 1fr 1fr 10rem;
 
   /* display: flex;
   flex-direction: column;
@@ -68,21 +68,10 @@ section  {
 }
 
 .three {
-  background-color: var(--secondary);
-  /* padding-left: 50rem;
-  padding-right: 7rem; */
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-
+  background-image: url('../Assets/Background.jpg');
   display: grid;
-  grid-template-columns: 30rem 1fr 2fr 1fr 1rem;
-  grid-template-rows: repeat(4, 1fr)
-
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-content: flex-end;
-  align-items: flex-end; */
+  grid-template-columns: 30rem 1fr 2fr 1fr 5rem;
+  grid-template-rows: 15rem 1fr 1fr 10rem;
 }
 
 .four {
@@ -94,7 +83,7 @@ section  {
 
   display: grid;
   grid-template-columns: 30rem 1fr 2fr 1fr 5rem;
-  grid-template-rows: repeat(4, 1fr)
+  grid-template-rows: 5rem 1fr 1fr 10rem;
   /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -127,7 +116,7 @@ h2 {
 
 p {
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .heading_subtitle {
@@ -224,53 +213,74 @@ p {
   /* height: fit-content; */
   /* width: 60rem; */
   grid-column: 2/ span 3;
-  grid-row: 2/span 4;
+  grid-row: 1/span 3;
   text-align: justify;
   word-wrap: normal;
   /* background-color: orange; */
 }
 
+.side-bar {
+  z-index: 1;
+  grid-column: 1;
+  grid-row: 1/span 4;
+  background-color: var(--background);
+}
+
 .content_three {
+  margin-left: 20px;
   grid-column: 2/span 3;
+  grid-row: 2/span 2;
   display: flex;
   flex-direction: column;
-  height: 50rem;
-  width: 70rem;
   /* background-color: green; */
-  justify-content: space-between;
+  justify-content: space-around;
+  gap: 20px;
+  max-width: 1200px;
+
 }
 
 .box_1 {
+
+  margin-top: ;
+  flex-shrink: 1;
   padding: 2rem;
   background-color: var(--content-box);
-  width: 70%;
-  height: 40%;
+  max-width: 50rem;
+  height: fit-content;
   align-self: flex-start;
   border-radius: 15px;
 }
 
 .box_2 {
+  flex-shrink: 1;
   padding: 2rem;
   background-color: var(--content-box);
-  width: 70%;
-  height: 40%;
+  max-width: 50rem;
+  height: fit-content;
   align-self: flex-end;
   border-radius: 15px;
 }
 
 .content_four {
   grid-column: 2/span 3;
-  grid-row: 1/span 4;
-  display: grid;
+  grid-row: 1/ span 3;
+  display: flex;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 5px;
+  max-width: 1200px;
   background-color: green;
+  justify-content: flex-start;
+  align-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .project_card {
-  justify-self: stretch;
-  size: auto;
+  /* flex-grow: 4; */
+  flex-shrink: 1;
+  display: grid;
+  width: 400px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -279,8 +289,8 @@ p {
 }
 
 .card_image {
-  /* height: 1fr;
-  width: 1fr; */
+  height: 80%;
+  width: 100%;
   overflow: hidden;
 }
 /* image showing project. Check if it is not stretched etc. and check best way to implement whether using html or as background img in css */
@@ -291,8 +301,8 @@ height: 100%;
 }
 
 .card_heading {
-  /* height: 20%;
-  width: 100%; */
+  height: 20%;
+  width: 100%;
   background-color: orange;
   text-align: center;
 }
