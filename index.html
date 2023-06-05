@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <h1><a href="index.html#home" class="link">Oskar Przybylski <span class="heading_subtitle">Future Dev</span></a></h1>
+      <h1><a href="index.html#home" class="link-header">Oskar Przybylski <span class="heading_subtitle">Future Dev</span></a></h1>
     </header>
       <main id="main">
         <div class="nav-links">
@@ -125,6 +125,34 @@
             </div>
 
           <div class="contact-box">
+            <form class="contact-form" action="index.html" method="post">
+              <input type="hidden" name="_subject" value="Message from oprzybylski.com!">
+                <div class="contact-row">
+                  <div class="contact-input-1" data-id="full-name">
+                    <label for="full-name"> Your Name</label>
+                    <input id="full-name" placeholder="Enter your name" type="text" name="name" required="required">
+                  </div>
+                  <div class="contact-input-1" data-id="email">
+                    <label for="email"> Email Address</label>
+                    <input id="email" placeholder="Enter your email address" type="email" name="_replyto" required="required">
+                  </div>
+                </div>
+                <div class="contact-row">
+                  <div class="contact-input-2" data-id="message">
+                    <label for="message"> Your Message</label>
+                    <textarea placeholder="Hi Oskar, I want to get in touch and ask about..." id="message" name="message" required="required" rows="7" minlength="30"></textarea>
+                  </div>
+                </div>
+                <button class="send-button" type="submit" id="send-button">
+                  <div class="send-button-content">
+                    Send
+                    <svg width="72" height="22" viewBox="0 0 72 22" class="bow-arrow">
+                      <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="0" d="M.043 11.119h70.714M60.917 1.319l9.8 9.8-9.8 9.8">
+                      </path>
+                    </svg>
+                  </div>
+                </button>
+            </form>
           </div>
           </section>
           <footer class="six">

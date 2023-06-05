@@ -22,7 +22,7 @@ body::-webkit-scrollbar {
 }
 
 header {
-  z-index: 2;
+  z-index: 3;
   max-height: 12rem;
   position: fixed;
   padding-left: 3rem;
@@ -98,6 +98,11 @@ ul {
   color: inherit;
 }
 
+.link-header {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 24px;
@@ -124,7 +129,7 @@ p {
 }
 
 .nav-links {
-  z-index: 2;
+  z-index: 1;
   position: fixed;
   width: 30%;
   height: 25rem;
@@ -163,7 +168,6 @@ p {
   height: 68%;
   padding-top: 1%;
   margin: 0.5%;
-  z-index: 1;
   justify-content: center;
 }
 
@@ -214,7 +218,6 @@ p {
 }
 
 .side-bar {
-  z-index: 1;
   grid-column: 1;
   grid-row: 1/span 5;
   background-color: var(--background);
@@ -306,21 +309,113 @@ height: 100%;
 }
 
 .bottom-bar {
+  z-index: 1;
   background-color: var(--secondary);
   grid-column: 1/ span 5;
   grid-row: 6/ span 2;
 }
 
 .contact-box {
-  z-index: 2;
+  display: flex;
+  justify-content: stretch;
+  z-index: 1;
   background-color: var(--background);
   grid-column: 2/ span 3;
   grid-row: 3/ span 4;
+  padding: 40px;
+}
+
+.contact-form {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color: green; */
+  flex-wrap: wrap;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content:stretch;
+  align-items: stretch;
+  position: relative;
+  width: 100%;
+  /* background-color: red; */
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+input {
+  padding: 0.6em;
+  padding-left: 0;
+  border: 0;
+  border-bottom: 1px solid var(--accent2);
+  background: transparent;
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 8.2em;
+  width: 10em;
+  padding: 0.6em;
+  padding-left: 0;
+  border: 0;
+  border-bottom: 1px solid var(--accent2);
+  background: transparent;
+  width: 100%;
+  resize: none;
+  box-sizing: border-box;
+  overflow-y:  auto;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.send-button {
+  display: inline-flex;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9em;
+  text-align: center;
+  background: transparent;
+  align-items: center;
+  font-weight: bold;
+  min-width: 20em;
+  box-sizing: border-box;
+}
+
+.send-button-content {
+  display: flex;
+  padding: 1.25em 3em;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-input-1 {
+  /* background-color: blue; */
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  position: relative;
+}
+
+.contact-input-2 {
+  /* background-color: blue; */
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  position: relative;
 }
 
 .contact-heading {
   justify-self: flex-start;
-  align-self:  center ;
+  align-self:  center;
   grid-column: 2/ span 2;
   grid-row: 2/ span 1;
 }
