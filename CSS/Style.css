@@ -5,7 +5,7 @@
   --secondary: #B6C3AF;
   --content-box: #F5F5F5;
   --font1: #FFFFFF;
-  --font2: #000000;
+  --font2: #000000E0;
   --accent: #FFFFFF;
   --accent2: #000000;
   --accent3: #61A85680;
@@ -36,10 +36,12 @@ header {
   border-color: var(--accent);
 }
 
+/* SECTIONS LAYOUT AND STYLE */
+
 main {
-  height: 100vh;
+  height: 100vh; 
   display: block;
-  min-width: 701px;
+  min-width: 300px;
 }
 
 section  {
@@ -94,9 +96,12 @@ ul {
   grid-template-rows: 5rem 1fr 1fr 1fr 1fr 1fr 5rem;
 }
 
+/* TEXT */
+
 .link {
   text-decoration: none;
   color: inherit;
+  transition: color 0.5s
 }
 
 .link:active {
@@ -133,6 +138,8 @@ p {
   font-weight: normal;
 }
 
+/* NAVIGATION */
+
 .nav-links {
   z-index: 1;
   position: fixed;
@@ -154,6 +161,8 @@ p {
   font-size: 3rem;
   color: var(--font1);
 }
+
+/* SECTION ONE - HOME */
 
 .polygon {
       width: 100%;
@@ -215,12 +224,14 @@ p {
 }
 
 .contact_link:hover {
-font-weight: bolder;
+text-shadow: 0px 0px 20px #666;
 }
 
 .contact_link:active {
  transform: translateY(2px);
 }
+
+/* SECTION TWO */
 
 .content_two {
   grid-column: 2/ span 3;
@@ -234,6 +245,8 @@ font-weight: bolder;
   grid-row: 1/span 5;
   background-color: var(--background);
 }
+
+/* SECTION THREE */
 
 .content_three {
   margin-left: 20px;
@@ -265,6 +278,8 @@ font-weight: bolder;
   align-self: flex-end;
   border-radius: 15px;
 }
+
+/* SECTION FOUR */
 
 .project-heading {
   grid-column: 2/span 3;
@@ -324,6 +339,8 @@ height: 100%;
   grid-column: 1/ span 5;
   grid-row: 6/ span 2;
 }
+
+/* SECTION FIVE */
 
 .contact-box {
   display: flex;
@@ -467,6 +484,8 @@ label {
 .contact-content-header {
   border-bottom: 2px solid var(--accent);
 }
+
+/* FOOTER */
 
 .foot {
   display: flex;
