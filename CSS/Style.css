@@ -11,7 +11,8 @@
   --accent3: #61A85680;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   scroll-snap-type: y mandatory;
@@ -20,6 +21,12 @@ body, html {
 
 body::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  display: block;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
@@ -39,21 +46,23 @@ header {
 /* SECTIONS LAYOUT AND STYLE */
 
 main {
-  height: 100vh; 
+  height: 100vh;
   display: block;
   min-width: 300px;
 }
 
-section  {
+section {
   height: 100vh;
   scroll-snap-align: start;
 }
 
 footer {
+  /* position: absolute; */
   display: grid;
+  bottom: 20;
   grid-template-columns: 5rem 1fr 1fr 1fr 1fr 1fr 5rem;
   grid-template-rows: 5rem 1fr 1fr 1fr 5rem;
-  height: 100vh;
+  /* height: 100vh; */
   scroll-snap-align: start;
   background-color: var(--secondary);
 }
@@ -62,6 +71,7 @@ ul {
   list-style: none;
   padding-left: 0;
 }
+
 .one {
   display: flex;
   background-image: url('../Assets/Background.jpg');
@@ -105,7 +115,7 @@ ul {
 }
 
 .link:active {
- transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .link-header {
@@ -128,8 +138,8 @@ h2 {
 }
 
 p {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
 }
 
 .heading_subtitle {
@@ -165,11 +175,11 @@ p {
 /* SECTION ONE - HOME */
 
 .polygon {
-      width: 100%;
-      height: 100vh;
-      background-color: var(--background);
-      clip-path: polygon(0 100%, 0 80%, 60% 80%, 60% 10%, 90% 10%, 90% 80% ,100% 80%, 100% 100%);
-      position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--background);
+  clip-path: polygon(0 100%, 0 80%, 60% 80%, 60% 10%, 90% 10%, 90% 80%, 100% 80%, 100% 100%);
+  position: relative;
 }
 
 .content {
@@ -191,10 +201,10 @@ p {
 }
 
 .introduction {
-  position:absolute;
-  top:63%;
+  position: absolute;
+  top: 63%;
   width: 90%;
-  height:30%;
+  height: 30%;
   text-align: left;
   color: var(--font2);
 }
@@ -224,11 +234,11 @@ p {
 }
 
 .contact_link:hover {
-text-shadow: 0px 0px 20px #666;
+  text-shadow: 0px 0px 20px #666;
 }
 
 .contact_link:active {
- transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 /* SECTION TWO */
@@ -318,9 +328,9 @@ text-shadow: 0px 0px 20px #666;
 
 /* image showing project. Check if it is not stretched etc. and check best way to implement whether using html or as background img in css */
 .card_image img {
-object-fit: cover;
-width: 100%;
-height: 100%;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .card_heading {
@@ -375,7 +385,7 @@ fieldset {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-content:stretch;
+  align-content: stretch;
   align-items: stretch;
   position: relative;
   width: 100%;
@@ -401,7 +411,7 @@ textarea {
   width: 100%;
   resize: none;
   box-sizing: border-box;
-  overflow-y:  auto;
+  overflow-y: auto;
 }
 
 label {
@@ -430,18 +440,18 @@ label {
   display: flex;
   font-size: 1rem;
   /* padding: 1.25em 3em; */
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+/* justify-content: center;
+align-items: center;
+gap: 20px;
 } */
 
-.send-button:hover {
+*/ .send-button:hover {
   background-color: var(--secondary)
 }
 
 .send-button:active {
   box-shadow: 0px -3px 5px #666;
- transform: translateY(4px);
+  transform: translateY(4px);
 }
 
 .contact-input-1 {
@@ -460,7 +470,7 @@ label {
 
 .contact-heading {
   justify-self: flex-start;
-  align-self:  center;
+  align-self: center;
   grid-column: 2/ span 2;
   grid-row: 2/ span 1;
 }
@@ -516,5 +526,5 @@ label {
 }
 
 .disclaimer {
-margin-right: 5rem;
+  margin-right: 5rem;
 }

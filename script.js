@@ -1,5 +1,5 @@
 // Script to change navigation bar colours based on page section
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   // Get all the navigation links
   var navLinks = document.querySelectorAll('.link');
 
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var sectionPositions = [];
 
   function calculateSectionPositions() {
-    sectionPositions = Array.from(sections).map(function(section) {
+    sectionPositions = Array.from(sections).map(function (section) {
       return {
         id: section.id,
         top: section.offsetTop,
@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log(sectionPositions);
 
   // Recalculate section positions on window resize
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     calculateSectionPositions();
   });
 
   // Add scroll event listener to track the position
-  window.addEventListener('scroll', function() {
+  window.addEventListener('scroll', function () {
     var currentPosition = window.pageYOffset;
 
     // Reset the color of all navigation links
-    navLinks.forEach(function(link) {
+    navLinks.forEach(function (link) {
       link.style.color = '';
     });
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!isOverFooter) {
       // Find the current section based on the scroll position
-      var currentSection = sectionPositions.find(function(section) {
+      var currentSection = sectionPositions.find(function (section) {
         return currentPosition >= section.top && currentPosition < section.bottom;
       });
       console.log(currentSection);
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Change the color of all links if the scroll position is within the second and fourth sections
       if (currentPosition >= sectionPositions[1].top && currentPosition < sectionPositions[3].bottom) {
-        navLinks.forEach(function(link) {
+        navLinks.forEach(function (link) {
           if (link.style.color !== 'var(--secondary)') {
             link.style.color = 'var(--font2)'; // Set the desired color
           }
@@ -62,12 +62,12 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Show navigation links if they were hidden
-      navLinks.forEach(function(link) {
+      navLinks.forEach(function (link) {
         link.style.display = '';
       });
     } else {
       // Hide navigation links when scrolling over the footer
-      navLinks.forEach(function(link) {
+      navLinks.forEach(function (link) {
         link.style.display = 'none';
       });
     }
