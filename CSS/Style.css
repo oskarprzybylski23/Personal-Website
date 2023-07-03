@@ -70,7 +70,9 @@ ul {
 }
 
 .one {
-  display: flex;
+  display: grid;
+  grid-template-columns: 30rem 1fr 2fr 1fr 5rem;
+  grid-template-rows: 5rem 1fr 1fr 1fr 5rem;
   background-image: url('../Assets/Background.jpg');
   object-fit: scale-down;
 }
@@ -172,7 +174,7 @@ p {
 /* SECTION ONE - HOME */
 
 .polygon {
-  width: 100%;
+  grid-column: 1 /span 5;
   height: 100vh;
   background-color: var(--background);
   clip-path: polygon(0 100%, 0 80%, 60% 80%, 60% 10%, 90% 10%, 90% 80%, 100% 80%, 100% 100%);
