@@ -131,9 +131,9 @@ h1 {
 
 h2 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: bold;
-  color: var(--font2);
+  color: var(-/-font2);
 }
 
 p {
@@ -178,7 +178,7 @@ p {
   grid-row: 4/span 2;
   display: flex;
   justify-content: start;
-  align-items: center;  
+  align-items: center;
   background-color: var(--background);
 }
 
@@ -279,7 +279,7 @@ p {
 
 /* SECTION FOUR */
 
-.project-heading {
+#four-heading-container {
   grid-column: 2/span 3;
   grid-row: 2;
   margin-left: 20px;
@@ -287,48 +287,97 @@ p {
   color: var(--font2);
 }
 
-.content_four {
-  padding: 20px;
+#four-content-container {
+  padding: 30px;
   grid-column: 2/span 3;
   grid-row: 3/ span 2;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
   max-width: 1200px;
-  overflow-y: scroll;
+  min-width: 700px;
+  overflow-y: auto;
 }
 
-.project_card {
-  object-fit: scale-down;
-  display: grid;
-  display: flex;
+.project-card {
+  position: relative;
+  width: 45%;
+  height: 35%;
+  display: block;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
   background-color: white;
-  border: solid;
-  border-width: thick;
+  border: solid 2px var(--font2);
+  border-radius: 15px;
+  /* transition: transform 0.3s; */
 }
 
-.card_image {
-  height: 80%;
+.card-image {
+  border-radius: 10px;
+  height: 70%;
   width: 100%;
   overflow: hidden;
 }
 
-/* image showing project. Check if it is not stretched etc. and check best way to implement whether using html or as background img in css */
-.card_image img {
-  object-fit: cover;
+.card-content {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
+  background-color: var(--accent);
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color: var(--font2);
+  font-size: 24px;
+  text-align: justify;
+  border: solid 2px var(--font2);
+  border-radius: 15px;
+  opacity: 0;
+  transform: translate(0);
+  transition: opacity 0.3s, transform 0.5s;
 }
 
-.card_heading {
-  height: 20%;
+.project-card:hover {
+  background-color: transparent;
+  border: dashed 2px var(--font2);
+
+  .card-image {
+    display: none;
+  }
+
+  .card-heading {
+    display: none;
+  }
+
+  .card-content {
+    opacity: 1;
+    transform: translate(-30px, -30px);
+  }
+
+}
+
+/* image showing project. Check if it is not stretched etc. and check best way to implement whether using html or as background img in css */
+.card-image img {
+  object-fit: cover;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
   width: 100%;
-  background-color: orange;
+  display: flex;
   text-align: center;
+}
+
+.card-heading h2 {
+  margin: 0;
 }
 
 .bottom-bar {
@@ -385,6 +434,7 @@ fieldset {
 
 input {
   display: block;
+  height: 30px;
   border: 0;
   border-bottom: 1px solid var(--accent2);
   background: transparent;
