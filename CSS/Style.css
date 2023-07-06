@@ -1,7 +1,7 @@
 /* Define the color palette */
 :root {
   --background: #EEEBE6;
-  --header: #00000099;
+  --header: #00000020;
   --secondary: #B6C3AF;
   --content-box: #F5F5F5;
   --font1: #FFFFFF;
@@ -35,6 +35,7 @@ header {
   width: 100%;
   display: flex;
   background-color: var(--header);
+  backdrop-filter: blur(5px);
   justify-content: space-between;
   border-bottom-style: solid;
   border-width: 0.1em;
@@ -71,10 +72,10 @@ ul {
 
 .one {
   display: grid;
-  grid-template-columns: 30rem 1fr 30rem 1fr 5rem;
-  grid-template-rows: 5rem 1fr 5fr 1fr 5rem;
+  grid-template-columns: 30rem 1fr 35rem 1fr 5rem;
+  grid-template-rows: 4.5rem 2fr 5fr 1fr 5rem;
   background-image: url('../Assets/Background.jpg');
-  object-fit: scale-down;
+  background-size: cover;
 }
 
 .two {
@@ -124,7 +125,7 @@ ul {
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--font1);
 }
@@ -173,6 +174,53 @@ p {
 
 /* SECTION ONE - HOME */
 
+#one-quote-container {
+  display: block;
+  padding: 0px 40px 0px 40px;
+  height:fit-content;
+  width: fit-content;
+  z-index: 2;
+  grid-column: 2/span 2;
+  grid-row: 2/span 2;
+  margin-top: 1rem;
+}
+
+#one-quote-container p:nth-child(1) {
+  color: var(--font2);
+  font-size: 1.5rem;
+}
+
+#one-quote-container p:nth-child(2) {
+  color: var(--secondary);
+  text-align: end;
+}
+
+#one-heading-container {
+  grid-column: 2/span 2;
+  grid-row: 3;
+  z-index: 2;
+  margin-top: 5rem;
+  /* margin-left: 320px; */
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+  justify-content: center;
+  color: var(--font1);
+}
+
+#one-heading-container h1 {
+  
+  font-size: 4rem;
+  margin: 0;
+  margin-left: 40px;
+
+}
+
+#one-heading-container p {
+  text-align: center;
+  font-size: 2rem;
+}
+
 #one-bottom-bar {
   grid-column: 1 /span 5;
   grid-row: 4/span 2;
@@ -196,25 +244,33 @@ p {
 }
 
 #one-content-container {
-  display: block;
-  padding: 20px;
   grid-column: 3;
   grid-row: 3;
+  display: block;
+  padding: 20px 20px 0px 20px;
   background-color: var(--background);
 }
 
 #one-content {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  height: 100%;
 }
 
 #img-me {
   max-width: 100%;
-  height: 30%;
+  height: auto;
 }
 
 #introduction {
+  display: flex;
+  align-items: center;
   text-align: left;
   color: var(--font2);
+  height: auto;
+  /* height: 100px; */
 }
 
 .page-link {
@@ -288,7 +344,7 @@ p {
 }
 
 #four-content-container {
-  padding: 30px;
+  margin-left: 20px;
   grid-column: 2/span 3;
   grid-row: 3/ span 2;
   display: flex;
@@ -296,14 +352,15 @@ p {
   flex-wrap: wrap;
   column-gap: 1rem;
   max-width: 1200px;
-  min-width: 700px;
-  overflow-y: auto;
+  /* min-width: 700px; */
+  overflow-y:visible;
 }
 
 .project-card {
   position: relative;
   width: 45%;
   height: 35%;
+  min-width: 200px;
   display: block;
   flex-direction: column;
   justify-content: space-between;
@@ -315,23 +372,29 @@ p {
 }
 
 .card-image {
-  border-radius: 10px;
+  border-radius: 10px 10px 0px 0px;
   height: 70%;
   width: 100%;
   overflow: hidden;
 }
 
+/* image showing project. Check if it is not stretched etc. and check best way to implement whether using html or as background img in css */
+.card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card-content {
   position: absolute;
-  margin: 0;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: var(--accent);
   display: block;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  padding: 20px;
   color: var(--font2);
   font-size: 24px;
   text-align: justify;
@@ -359,11 +422,6 @@ p {
     transform: translate(-30px, -30px);
   }
 
-}
-
-/* image showing project. Check if it is not stretched etc. and check best way to implement whether using html or as background img in css */
-.card-image img {
-  object-fit: cover;
 }
 
 .card-heading {
