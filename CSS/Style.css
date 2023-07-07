@@ -150,7 +150,7 @@ p {
   font-size: 20px;
 }
 
-.heading_subtitle {
+#header-half {
   font-family: 'Courier New', monospace;
   font-size: 32px;
   font-weight: normal;
@@ -299,11 +299,6 @@ p {
   text-align: left;
   color: var(--font2);
   height: auto;
-  /* height: 100px; */
-}
-
-.contact_link:active {
-  transform: translateY(2px);
 }
 
 /* SECTION TWO */
@@ -317,14 +312,14 @@ p {
   word-wrap: normal;
 }
 
-#about-text h2 {
+.about-text h2 {
 margin-top: 0;
 font-size: 3rem;
 }
 
 /* SECTION THREE */
 
-.content_three {
+#three-content-container {
   margin-left: 40px;
   grid-column: 2/span 3;
   grid-row: 2/span 3;
@@ -630,7 +625,7 @@ label {
   width: 100%;
   height: fit-content;
   justify-content: space-between;
-  row-gap: 5rem;
+  row-gap: 8rem;
   color: var(--font1);
 
 }
@@ -659,7 +654,9 @@ label {
   width: 100%;
   text-align: justify;
   height: fit-content;
-  margin-top: 10%;
+  /* margin-top: 10%; */
+  padding-left: 10%;
+  padding-right: 15%;
 }
 
 #footer-quote-container p:nth-child(1) {
@@ -686,7 +683,7 @@ label {
 .contact-links {
   z-index: 3;
   column-gap: 3rem;
-  row-gap: 1rem;
+  row-gap: 2rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
