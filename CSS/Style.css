@@ -404,9 +404,11 @@ font-size: 3rem;
 }
 
 .card-content {
+  z-index: 2;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: fit-content;
+  min-height: 100%;
   background-color: var(--accent);
   display: flex;
   flex-direction: column;
