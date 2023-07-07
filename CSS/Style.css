@@ -126,9 +126,13 @@ a {
 
 h1 {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.5rem;
+  font-size: 4rem;
   font-weight: bold;
   color: var(--font1);
+}
+
+header h1 {
+  font-size: 1.5rem;
 }
 
 h2 {
@@ -147,12 +151,12 @@ h3 {
 
 p {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 #header-half {
   font-family: 'Courier New', monospace;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: normal;
 }
 
@@ -236,7 +240,6 @@ p {
 
 #one-heading-container h1 {
   z-index: 1;
-  font-size: 4rem;
   margin: 0;
   margin-left: 40px;
   transform: translate(0px, 4.5rem);
@@ -310,11 +313,6 @@ p {
   margin-left: 40px;
   margin-right: 40px;
   word-wrap: normal;
-}
-
-.about-text h2 {
-margin-top: 0;
-font-size: 3rem;
 }
 
 /* SECTION THREE */
@@ -417,7 +415,6 @@ font-size: 3rem;
   box-sizing: border-box;
   padding: 20px;
   color: var(--font2);
-  font-size: 24px;
   text-align: justify;
   border: solid 2px var(--font2);
   border-radius: 15px;
@@ -436,7 +433,6 @@ line-height: 1.5rem;
 
 .card-content .page-link {
   align-self: flex-end;
-  font-size: 1.5rem;
 }
 
 .card-link:hover {
@@ -663,23 +659,16 @@ label {
 
 #footer-quote-container p:nth-child(1) {
   font-size: 1.5rem;
+  font-weight: lighter;
   font-style: italic;
   margin: 0;
 }
 
 #footer-quote-container p:nth-child(2) {
+  font-size: 1.3rem;
   text-align: end;
   margin: 5px;
   color: var(--highlight);
-}
-
-.foot {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  grid-column: 1/ span 7;
-  grid-row: 5/ span 1;
-  border-top: 1px solid var(--accent);
 }
 
 .contact-links {
@@ -714,10 +703,23 @@ label {
   font-weight: lighter;
 }
 
-.signature {
+#foot {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  grid-column: 1/ span 7;
+  grid-row: 5/ span 1;
+  border-top: 1px solid var(--accent);
+}
+
+#foot p {
+  font-size: 1.3rem;
+}
+
+#foot p:first-child {
   margin-left: 3rem;
 }
 
-.disclaimer {
+#foot p:nth-child(1) {
   margin-right: 5rem;
 }
