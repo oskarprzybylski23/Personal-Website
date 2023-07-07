@@ -110,17 +110,32 @@ a {
   text-decoration: none;
 }
 
-.link {
+.nav-link {
   color: inherit;
-  transition: color 0.5s
+  transition: color 0.5s;
 }
 
-.link:active {
+.nav-link:active {
+  transform: translateY(2px);
+}
+
+.page-link {
+  font-family: Josefin Sans;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--font2);
+  transition: color 0.2s;
+}
+
+.page-link:hover {
+  color: var(--highlight);
+}
+
+.page-link:active {
   transform: translateY(2px);
 }
 
 .link-header {
-  text-decoration: none;
   color: inherit;
 }
 
@@ -158,21 +173,6 @@ p {
   font-family: 'Courier New', monospace;
   font-size: 2rem;
   font-weight: normal;
-}
-
-.page-link {
-  font-family: Josefin Sans;
-  font-size: 1.5em;
-  text-decoration: none;
-  color: var(--font2);
-}
-
-.page-link:hover {
-  color: var(--highlight);
-}
-
-.page-link:active {
-  transform: translateY(2px);
 }
 
 /* NAVIGATION */
@@ -435,10 +435,6 @@ line-height: 1.5rem;
   align-self: flex-end;
 }
 
-.card-link:hover {
-  color: var(--accent2);
-}
-
 .card-content p {
   margin: 0;
 }
@@ -574,11 +570,9 @@ label {
   cursor: pointer;
 }
 
-.send-button:hover,
-.send-button:hover + .bow-arrow path {
+.send-button:hover{
   background-color: var(--secondary);
   color: var(--font1);
-  fill: var(--font1);
 }
 
 .send-button:active {
@@ -640,10 +634,6 @@ label {
   align-content: flex-start;
 }
 
-.contact-content-1 li {
-  color: ;
-}
-
 .contact-content-2 {
   width: 45%;
   display: flex;
@@ -656,7 +646,6 @@ label {
   width: 100%;
   text-align: justify;
   height: fit-content;
-  /* margin-top: 10%; */
   padding-left: 10%;
   padding-right: 15%;
 }
@@ -691,7 +680,6 @@ label {
 
 .contact-links .page-link {
   color: var(--font1);
-  font-weight: normal;
   font-size: 1.5em;
   font-weight: lighter;
 }

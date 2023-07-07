@@ -1,7 +1,7 @@
 // Script to change navigation bar colours based on page section
 document.addEventListener('DOMContentLoaded', function () {
   // Get all the navigation links
-  var navLinks = document.querySelectorAll('.link');
+  var navLinks = document.querySelectorAll('.nav-link');
 
   // Calculate the position of each section on the page
   var sections = document.querySelectorAll('section');
