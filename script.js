@@ -48,14 +48,14 @@ document.addEventListener('DOMContentLoaded', function () {
       if (currentSection) {
         var currentLink = document.querySelector('a[href="#' + currentSection.id + '"]');
         if (currentLink) {
-          currentLink.style.color = 'var(--secondary)'; // Set the desired color
+          currentLink.style.color = 'var(--highlight)'; // Set the desired color
         }
       }
 
       // Change the color of all links if the scroll position is within the second and fourth sections
       if (currentPosition >= sectionPositions[1].top && currentPosition < sectionPositions[3].bottom) {
         navLinks.forEach(function (link) {
-          if (link.style.color !== 'var(--secondary)') {
+          if (link.style.color !== 'var(--highlight)') {
             link.style.color = 'var(--font2)'; // Set the desired color
           }
         });
