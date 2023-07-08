@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (currentPosition >= sectionPositions[1].top && currentPosition < sectionPositions[3].bottom) {
         navLinks.forEach(function (link) {
           if (link.style.color !== 'var(--highlight)') {
-            link.style.color = 'var(--font2)'; // Set the desired color
+            link.style.color = 'var(--font-dark)'; // Set the desired color
           }
         });
       }
