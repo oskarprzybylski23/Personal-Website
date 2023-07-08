@@ -162,11 +162,13 @@ h3 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 2rem;
   font-weight: bold;
+  margin: 0;
 }
 
 p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1rem;
+  line-height: 1.3rem;
 }
 
 #header-half {
@@ -318,6 +320,7 @@ p {
 /* SECTION THREE */
 
 #three-content-container {
+  margin-top: 20px;
   margin-left: 40px;
   grid-column: 2/span 3;
   grid-row: 2/span 3;
@@ -334,11 +337,12 @@ p {
   background-color: var(--background);
 }
 
-.container {
-  flex-shrink: 1;
-  padding: 1rem;
+.three-container {
+  /* flex-shrink: 1; */
+  padding: 20px;
   background-color: var(--content-box);
-  max-width: 50rem;
+  min-width: 50%;
+  max-width: 90%;
   height: fit-content;
   border-radius: 15px;
 }
@@ -349,6 +353,10 @@ p {
 
 .box-2 {
   align-self: flex-end;
+}
+
+.content-text p:last-of-type {
+  margin-bottom: 0px;
 }
 
 /* SECTION FOUR */
@@ -552,6 +560,7 @@ textarea {
 }
 
 label {
+  margin-left: 10px;
   margin-bottom: 0.8rem;
   display: block;
   font-size: 1rem;
@@ -617,6 +626,7 @@ label {
   border-bottom: 1px solid var(--accent);
   color: var(--highlight);
   letter-spacing: 0.3rem;
+  margin-bottom: 2rem;
 }
 
 #footer-content-container {
