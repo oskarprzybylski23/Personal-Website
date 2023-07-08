@@ -433,6 +433,7 @@ line-height: 1.5rem;
 
 .card-content .page-link {
   align-self: flex-end;
+  margin-top: 5px;
 }
 
 .card-content p {
@@ -524,33 +525,39 @@ fieldset {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-input {
+.contact-row:first-of-type {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  font-family: 'Courier New', Courier, monospace;
   display: block;
-  height: 30px;
   border: 0;
   border-bottom: 1px solid var(--accent2);
   background: transparent;
   box-sizing: border-box;
-  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+input {
+  height: 30px;
 }
 
 textarea {
-  height: auto;
-  font-family: 'Courier New', Courier, monospace;
-  display: block;
-  border: 0;
-  border-bottom: 1px solid var(--accent2);
-  background: transparent;
+  height: 60%;
   width: 100%;
   resize: none;
-  box-sizing: border-box;
   overflow-y: auto;
 }
 
 label {
   margin-bottom: 0.8rem;
   display: block;
+  font-size: 1rem;
 }
+
+
 
 .send-button {
   display: inline-flex;
@@ -558,7 +565,6 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.9em;
-  text-align: center;
   background: transparent;
   align-items: center;
   font-weight: bold;
@@ -632,6 +638,7 @@ label {
   flex-direction: column;
   justify-content: flex-start;
   align-content: flex-start;
+  font-size: 0.6667rem;
 }
 
 .contact-content-2 {
@@ -639,6 +646,7 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  
 
 }
 
@@ -651,14 +659,14 @@ label {
 }
 
 #footer-quote-container p:nth-child(1) {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: lighter;
   font-style: italic;
   margin: 0;
 }
 
 #footer-quote-container p:nth-child(2) {
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: end;
   margin: 5px;
 }
@@ -694,7 +702,7 @@ label {
 
 .contact-details p {
   margin: 0;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: lighter;
 }
 
