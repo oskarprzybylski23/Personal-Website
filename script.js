@@ -72,6 +72,32 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
+
+  const content = document.getElementById('one');
+  const text = document.querySelector('#one-heading-container');
+
+// Get the brightness of the background color
+function getBrightness(rgb) {
+  const [r, g, b] = rgb.match(/\d+/g);
+  return (r * 299 + g * 587 + b * 114) / 1000;
+}
+
+// Change the blend mode based on the background brightness
+function updateBlendMode() {
+  const bgColor = window.getComputedStyle(content).getPropertyValue('background-color');
+  const brightness = getBrightness(bgColor);
+
+  if (brightness > 125) {
+    text.style.mixBlendMode = 'difference'; // Set blend mode to difference for bright backgrounds
+  } else {
+    text.style.mixBlendMode = 'screen'; // Set blend mode to screen for dark backgrounds
+  }
+}
+
+// Call the function initially and whenever the window is resized
+window.addEventListener('DOMContentLoaded', updateBlendMode);
+window.addEventListener('resize', updateBlendMode);
+
 });
 
 
