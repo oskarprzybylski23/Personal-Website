@@ -68,6 +68,17 @@ ul {
   padding-left: 0;
 }
 
+.icon {
+  height: 2rem;
+  width: 2rem;
+  stroke: #245357;
+  fill: var(--secondary-background);
+  display: inline-block;
+  margin-bottom: -2px;
+  margin-left: 0.5rem;
+  transition: filter 0.2s;
+}
+
 .one {
   display: grid;
   grid-template-columns: 30rem 1fr 35rem 1fr 5rem;
@@ -121,7 +132,7 @@ a {
 
 .page-link {
   font-family: Josefin Sans;
-  font-size: 1.5em;
+  font-size: 2rem;
   text-decoration: none;
   color: var(--font-dark);
   transition: color 0.2s;
@@ -129,6 +140,11 @@ a {
 
 .page-link:hover {
   color: var(--highlight);
+
+  .icon {
+    filter: invert(50%);
+  }
+
 }
 
 .page-link:active {
@@ -205,6 +221,8 @@ p {
 
 /* SECTION ONE - HOME */
 
+
+
 #one-heading-container {
   grid-column: 2/span 2;
   grid-row: 3;
@@ -270,7 +288,7 @@ p {
   justify-content: space-between;
   align-content: center;
   height: 100%;
-  
+
 }
 
 #img-me {
@@ -367,7 +385,7 @@ p {
   column-gap: 1rem;
   max-width: 1200px;
   height: 90%;
-  overflow-y:visible;
+  overflow-y: visible;
 }
 
 .project-card {
@@ -393,7 +411,7 @@ p {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  
+
 }
 
 .card-content {
@@ -405,7 +423,7 @@ p {
   background-color: var(--content-box);
   display: flex;
   flex-direction: column;
-  align-items:flex-start;
+  align-items: flex-start;
   justify-content: space-between;
   box-sizing: border-box;
   padding: 20px;
@@ -423,7 +441,7 @@ p {
   flex-direction: column;
   justify-content: space-evenly;
   height: 80%;
-line-height: 1.5rem;
+  line-height: 1.5rem;
 }
 
 .card-content .page-link {
@@ -496,7 +514,7 @@ line-height: 1.5rem;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  
+
 }
 
 fieldset {
@@ -511,7 +529,7 @@ fieldset {
   height: 100%;
   padding: 40px;
   border: solid 1px var(--font-dark);
-  
+
 }
 
 .contact-row {
@@ -529,7 +547,8 @@ fieldset {
   margin-bottom: 20px;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: 'Courier New', Courier, monospace;
   display: block;
   border: 0;
@@ -577,12 +596,16 @@ label {
   cursor: pointer;
 }
 
-.send-button:hover{
+.send-button:hover {
   background-color: var(--secondary-background);
   color: var(--font-bright);
 }
 
-.send-button:active {
+.send-button:hover svg.bow-arrow path {
+  stroke: var(--font-bright);
+}
+
+.send-button .send-button:active {
   box-shadow: 0px -3px 5px #666;
   transform: translateY(4px);
 }
@@ -625,7 +648,7 @@ label {
   grid-column: 2/ span 5;
   grid-row: 2/ span 3;
   display: flex;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
   width: 100%;
   height: fit-content;
   justify-content: space-between;
@@ -648,7 +671,7 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  
+
 
 }
 
