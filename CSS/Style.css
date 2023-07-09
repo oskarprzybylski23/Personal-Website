@@ -6,9 +6,9 @@
   --highlight: #8AB5BB;
   --content-box: #F5F5F5;
   --font-bright: #FFFFFF;
-  --font-dark: #000000E0;
+  --font-dark: #212427;;
   --accent-bright: #FFFFFF;
-  --accent-dark: #000000;
+  --accent-dark: #212427;
   --accent-mid: #245357;
 }
 
@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
 }
 
 body {
+
   display: block;
 }
 
@@ -71,11 +72,8 @@ ul {
 .icon {
   height: 2rem;
   width: 2rem;
-  stroke: #245357;
-  fill: var(--secondary-background);
   display: inline-block;
   margin-bottom: -2px;
-  margin-left: 0.5rem;
   transition: filter 0.2s;
 }
 
@@ -142,7 +140,7 @@ a {
   color: var(--highlight);
 
   .icon {
-    filter: invert(50%);
+    filter: invert(83%) sepia(2%) saturate(5238%) hue-rotate(130deg) brightness(100%) contrast(57%);
   }
 
 }
@@ -179,6 +177,7 @@ h3 {
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
+  color: var(--font-dark);
 }
 
 p {
@@ -186,6 +185,7 @@ p {
   font-size: 1rem;
   line-height: 1.3rem;
   text-align: justify;
+  color: var(--font-dark);
 }
 
 #header-half {
@@ -271,6 +271,10 @@ p {
   align-items: center;
   align-content: center;
   height: fit-content;
+}
+
+.one .icon {
+  margin-left: 0.5rem;
 }
 
 #one-content-container {
@@ -411,6 +415,7 @@ p {
   height: 100%;
   width: 100%;
   object-fit: cover;
+  /* filter: invert(20%) sepia(85%) saturate(100%) hue-rotate(155deg) brightness(80%) contrast(140%); */
 
 }
 
@@ -447,6 +452,7 @@ p {
 .card-content .page-link {
   align-self: flex-end;
   margin-top: 5px;
+  font-size: 1.5rem;
 }
 
 .card-content p {
@@ -688,6 +694,7 @@ label {
   font-weight: lighter;
   font-style: italic;
   margin: 0;
+  color: var(--font-bright);
 }
 
 #footer-quote-container p:nth-child(2) {
@@ -713,7 +720,7 @@ label {
 
 .contact-links .page-link {
   color: var(--font-bright);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: lighter;
 }
 
@@ -727,8 +734,20 @@ label {
 
 .contact-details p {
   margin: 0;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: lighter;
+  color: var(--font-bright);
+}
+
+.six .icon {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  margin-right: 0.5rem;
+  transition: filter 0s;
+}
+
+.contact-details .icon {
+  height: 1rem;
+  width: auto;
 }
 
 #foot {
