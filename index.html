@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
-  <title> Oskar Przybylski HPersonal Website </title>
+  <title> Oskar Przybylski FAC Application Page </title>
   <link rel="stylesheet" href="CSS/Style.css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <meta charset="utf-8">
-  <!-- <meta name='viewport' content='width=device-width, initial-scale=1.0'> -->
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <script src="script.js"></script>
+
+  <!-- Email -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("3pyN1HCSuoz912Vrh");
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -56,8 +66,8 @@
     </section>
     <section id="about" class="two">
       <div id="two-content-container">
+        <h2>About Me</h2>
         <div id="about-text">
-          <h2>About Me</h2>
           <article>
             <h3>I’m Oskar Przybylski /pʃɪˈbɪlski/.</h3>
             <p>
@@ -77,6 +87,7 @@
             </p>
           </article>
         </div>
+      </div>
       </div>
     </section>
     <section id="why" class="three">
@@ -230,14 +241,12 @@
       </div>
 
       <div class="contact-box">
-        <form class="contact-form" action="index.html" method="post">
-          <!-- amend "value" to match website name -->
+        <form class="contact-form" method="post">
           <fieldset>
-            <input type="hidden" name="_subject" value="Message from oprzybylski.com!">
             <div class="contact-row">
               <div class="contact-input-1" data-id="full-name">
-                <label for="full-name"> Your Name</label>
-                <input id="full-name" placeholder="Enter your name" type="text" name="name" required="required">
+                <label for="name"> Your Name</label>
+                <input id="name" placeholder="Enter your name" type="text" name="name" required="required">
               </div>
               <div class="contact-input-1" data-id="email">
                 <label for="email"> Email Address</label>
@@ -251,7 +260,7 @@
                   required="required" rows="7" minlength="30"></textarea>
               </div>
             </div>
-            <button class="send-button" type="submit" id="send-button">
+            <button class="send-button" type="submit" id="send-button" onclick="sendMail()">
               Send
               <svg width="72" height="22" viewBox="0 0 72 22" class="bow-arrow">
                 <path fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="0"
@@ -286,8 +295,9 @@
       <div class="contact-content-2">
         <h3 class="contact-content-header">Get in Touch!</h3>
         <ul class="contact-details">
-          <p><img src="Assets/mail_icon.svg" alt="Mail Icon" class="icon">oskar.przybylski23@gmail.com
-          </p>
+          <img src="Assets/mail_icon.svg" alt="Mail Icon" class="icon"><a href="mailto: oskar.przybylski23@gmail.com"
+            class="page-link">oskar.przybylski23@gmail.com</a>
+
         </ul>
       </div>
       <div id="footer-quote-container">

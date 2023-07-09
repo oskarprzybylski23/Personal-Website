@@ -72,33 +72,27 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     }
   });
-
-  const content = document.getElementById('one');
-  const text = document.querySelector('#one-heading-container');
-
-// Get the brightness of the background color
-function getBrightness(rgb) {
-  const [r, g, b] = rgb.match(/\d+/g);
-  return (r * 299 + g * 587 + b * 114) / 1000;
-}
-
-// Change the blend mode based on the background brightness
-function updateBlendMode() {
-  const bgColor = window.getComputedStyle(content).getPropertyValue('background-color');
-  const brightness = getBrightness(bgColor);
-
-  if (brightness > 125) {
-    text.style.mixBlendMode = 'difference'; // Set blend mode to difference for bright backgrounds
-  } else {
-    text.style.mixBlendMode = 'screen'; // Set blend mode to screen for dark backgrounds
-  }
-}
-
-// Call the function initially and whenever the window is resized
-window.addEventListener('DOMContentLoaded', updateBlendMode);
-window.addEventListener('resize', updateBlendMode);
-
 });
 
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
 
-// 
+  const serviceID = "service_e5w12e8";
+  const templateID = "template_46lshwp";
+
+    emailjs.send(serviceID, templateID, params)
+    .then(res=>{
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+        console.log(res);
+        alert("Thank you for contacting me! I will reply to you as soon as I can!")
+
+    })
+    .catch(err=>console.log(err));
+}
+
