@@ -75,24 +75,62 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function sendMail() {
+  var nameInput = document.getElementById("name");
+  var emailInput = document.getElementById("email");
+  var messageInput = document.getElementById("message");
+
+  var name = nameInput.value;
+  var email = emailInput.value;
+  var message = messageInput.value;
+
+  if (!validateName(name)) {
+    alert("Please enter a valid name.");
+    nameInput.focus();
+    return;
+  }
+
+  if (!validateEmail(email)) {
+    alert("Please enter a valid email address.");
+    emailInput.focus();
+    return;
+  }
+
+  if (!validateMessage(message)) {
+    alert("Please enter a message with at least 30 characters.");
+    messageInput.focus();
+    return;
+  }
+
   var params = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    message: document.getElementById("message").value,
+    name: name,
+    email: email,
+    message: message
   };
 
   const serviceID = "service_e5w12e8";
   const templateID = "template_46lshwp";
 
-    emailjs.send(serviceID, templateID, params)
-    .then(res=>{
-        document.getElementById("name").value = "";
-        document.getElementById("email").value = "";
-        document.getElementById("message").value = "";
-        console.log(res);
-        alert("Thank you for contacting me! I will reply to you as soon as I can!")
-
+  emailjs.send(serviceID, templateID, params)
+    .then(res => {
+      nameInput.value = "";
+      emailInput.value = "";
+      messageInput.value = "";
+      console.log(res);
+      alert("Thank you for contacting me! I will reply to you as soon as I can!");
     })
-    .catch(err=>console.log(err));
+    .catch(err => console.log(err));
+}
+
+function validateName(name) {
+  return name.trim() !== "";
+}
+
+function validateEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+function validateMessage(message) {
+  return message.length >= 30;
 }
 
