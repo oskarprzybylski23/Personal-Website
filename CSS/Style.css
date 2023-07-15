@@ -189,6 +189,7 @@ h4 {
   font-weight: bold;
   margin-top: 0.5rem;
   color: var(--secondary-background);
+  opacity: 70%;
 }
 
 p {
@@ -286,6 +287,47 @@ p {
 
 .one .icon {
   margin-left: 0.5rem;
+}
+
+#map-tooltip {
+  z-index: 3;
+  grid-column: 4;
+  grid-row: 4/span 2;
+  align-self: center;
+  display: block;
+  text-align: center;
+}
+
+#tooltip-text {
+  position: absolute;
+  visibility: hidden;
+  font-size: 1rem;
+  transform: translate(-270px, -80px);
+  background-color: var(--header);
+  padding: 10px;
+  border-radius: 15px;
+  transition: opacity 0.5s;
+  opacity: 0;
+  text-align: justify;
+  line-height: 1.2rem;
+  width: 250px;
+}
+
+#tooltip-text a {
+  text-decoration: underline;
+  color: var(--font-bright);
+}
+
+#map-tooltip:hover {
+  #tooltip-text {
+    color: var(--font-bright);
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+#map-tooltip:active {
+  transform: unset;
 }
 
 #one-content-container {
@@ -437,8 +479,6 @@ p {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  /* filter: invert(20%) sepia(85%) saturate(100%) hue-rotate(155deg) brightness(80%) contrast(140%); */
-
 }
 
 .card-content {
@@ -514,6 +554,10 @@ p {
   grid-column: 2/span 3;
   grid-row: 5;
   text-align: center;
+}
+
+#this-website-link a {
+  font-size: 1.5rem;
 }
 
 /* SECTION FIVE */
@@ -870,6 +914,10 @@ label {
   }
 
   /* section one */
+
+  #map-tooltip {
+    display: none;
+  }
 
   #one-heading-container {
     grid-column: 1/span 4;
