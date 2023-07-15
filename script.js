@@ -19,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   calculateSectionPositions(); // Initial calculation of section positions
-  console.log(sectionPositions);
 
   // Recalculate section positions on window resize
   window.addEventListener('resize', function () {
@@ -43,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
       var currentSection = sectionPositions.find(function (section) {
         return currentPosition >= section.top && currentPosition < section.bottom;
       });
-      console.log(currentSection);
       // If a current section is found, change the color of its corresponding navigation link
       if (currentSection) {
         var currentLink = document.querySelector('a[href="#' + currentSection.id + '"]');
@@ -115,7 +113,6 @@ function sendMail() {
       nameInput.value = "";
       emailInput.value = "";
       messageInput.value = "";
-      console.log(res);
       alert("Thank you for contacting me! I will reply to you as soon as I can!");
     })
     .catch(err => console.log(err));
