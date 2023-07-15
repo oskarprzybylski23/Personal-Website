@@ -51,7 +51,7 @@ git  clone  https://github.com/oskarprzybylski23/Personal-Website.git
 
 ```bash
 
-cd  personal-website`
+cd  personal-website
 
 ```
 
