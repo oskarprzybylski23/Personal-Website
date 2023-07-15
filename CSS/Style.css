@@ -459,8 +459,10 @@ p {
   border: solid 1px var(--accent-dark);
   border-radius: 15px;
   opacity: 0;
+  visibility: hidden;
   transform: translate(0);
   transition: opacity 0.3s, transform 0.5s;
+  
 }
 
 .card-text {
@@ -502,6 +504,7 @@ p {
   }
 
   .card-content {
+    visibility:visible;
     opacity: 1;
     transform: translate(-30px, -30px);
   }
