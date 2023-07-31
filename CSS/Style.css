@@ -121,6 +121,10 @@ a {
   text-decoration: none;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 .nav-link {
   color: inherit;
   transition: color 0.5s;
